@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+
+    <!-- X Player Card Tags -->
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:title" content="Your Video Title Here" />
+    <meta name="twitter:description" content="A short description of your video clip." />
+    <!-- IMPORTANT: Replace the placeholders below with your actual GitHub Pages URL -->
+    <meta name="twitter:image" content="https://github.io" />
+    <meta name="twitter:player" content="https://github.io" />
+    <meta name="twitter:player:width" content="1280" />
+    <meta name="twitter:player:height" content="720" />
+
+    <style>
+        /* Removes browser margins and sets up a black backdrop */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Forces the video element to stretch perfectly across the canvas */
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain; /* Keeps your video aspect ratio correct without stretching pixels */
+        }
+    </style>
+</head>
+<body>
+    <!-- The native player handling your video stream -->
+    <video controls poster="thumbnail.jpg" autoplay muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
